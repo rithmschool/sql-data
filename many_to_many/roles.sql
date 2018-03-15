@@ -1,0 +1,6 @@
+CREATE TABLE roles
+(
+  id SERIAL PRIMARY KEY,
+  movie_id INTEGER REFERENCES movies (id) ON DELETE CASCADE,
+  star_id INTEGER REFERENCES stars (id) ON DELETE CASCADE
+);

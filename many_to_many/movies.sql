@@ -1,9 +1,5 @@
--- in terminal:
--- psql < movies_and_stars.sql
--- psql movies_db
-DROP DATABASE IF EXISTS  movies_db;
-CREATE DATABASE movies_db;
 \c movies_db
+DROP TABLE IF EXISTS movies;
 CREATE TABLE movies
 (
   id SERIAL PRIMARY KEY,
@@ -11,19 +7,6 @@ CREATE TABLE movies
   release_year INTEGER,
   runtime INTEGER,
   rating TEXT
-);
-CREATE TABLE stars
-(
-  id SERIAL PRIMARY KEY,
-  first_name TEXT,
-  last_name TEXT,
-  birth_date DATE
-);
-CREATE TABLE roles
-(
-  id SERIAL PRIMARY KEY,
-  movie_id INTEGER REFERENCES movies (id) ON DELETE CASCADE,
-  star_id INTEGER REFERENCES stars (id) ON DELETE CASCADE
 );
 INSERT INTO movies
   (title, release_year, runtime, rating)
@@ -50,6 +33,7 @@ VALUES
   ('The Lion King', 1994, 89, 'G'),
   ('Toy Story 3', 2010, 103, 'G'),
   ('Wonder Woman', 2017, 141, 'PG-13'),
+  ('Iron Man 3', 2013, 129, 'PG-13'),
   ('Captain America: Civil War', 2016, 147, 'PG-13'),
   ('The Hunger Games', 2012, 142, 'PG-13'),
   ('Spider-Man', 2002, 121, 'PG-13'),
@@ -110,20 +94,20 @@ VALUES
   ('Harry Potter and the Order of the Phoenix', 2007, 139, 'PG-13'),
   ('The Chronicles of Narnia: The Lion, the Witch and the Wardrobe', 2005, 132, 'PG'),
   ('Man of Steel', 2013, 143, 'PG-13'),
-  ('The Empire Strikes Back', 1980, 129, 'PG')
-  ('Harry Potter and the Goblet of Fire', 2005, 153, 'PG-13')
-  ('Monsters, Inc.', 2001, 90, 'G')
-  ('Home Alone', 1990, 105, 'PG')
-  ('The Hunger Games: Mockingjay - Part 2', 2015, 137, 'PG-13')
-  ('The Matrix Reloaded', 2003, 138, 'R')
-  ('The Twilight Saga: Breaking Dawn Part 1', 2011, 108, 'PG-13')
-  ('Meet the Fockers', 2004, 114, 'PG-13')
-  ('The Hangover', 2009, 96, 'R')
-  ('Gravity', 2013, 91, 'PG-13')
-  ('Sing', 2016, 110, 'PG')
-  ('Monsters University', 2013, 107, 'G')
-  ('Shrek', 2001, 90, 'PG')
-  ('Despicable Me 3', 2017, 90, 'PG')
-  ('The Amazing Spider-Man', 2012, 136, 'PG-13')
-  ('Harry Potter and the Chamber of Secrets', 2002, 161, 'PG')
+  ('The Empire Strikes Back', 1980, 129, 'PG'),
+  ('Harry Potter and the Goblet of Fire', 2005, 153, 'PG-13'),
+  ('Monsters, Inc.', 2001, 90, 'G'),
+  ('Home Alone', 1990, 105, 'PG'),
+  ('The Hunger Games: Mockingjay - Part 2', 2015, 137, 'PG-13'),
+  ('The Matrix Reloaded', 2003, 138, 'R'),
+  ('The Twilight Saga: Breaking Dawn Part 1', 2011, 108, 'PG-13'),
+  ('Meet the Fockers', 2004, 114, 'PG-13'),
+  ('The Hangover', 2009, 96, 'R'),
+  ('Gravity', 2013, 91, 'PG-13'),
+  ('Sing', 2016, 110, 'PG'),
+  ('Monsters University', 2013, 107, 'G'),
+  ('Shrek', 2001, 90, 'PG'),
+  ('Despicable Me 3', 2017, 90, 'PG'),
+  ('The Amazing Spider-Man', 2012, 136, 'PG-13'),
+  ('Harry Potter and the Chamber of Secrets', 2002, 161, 'PG'),
   ('The Incredibles', 2004, 115, 'PG');
