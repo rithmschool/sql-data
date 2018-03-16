@@ -35,3 +35,28 @@ As another warmup, write the queries that will show you the following informatio
 1.  The first and last name of the five youngest stars.
 1.  A table of first names along with the number of stars having that first name, provided that this number is greater than 1.
 1.  A table of years along with the number of stars born in that year, sorted chronologically.
+
+### Part 3
+
+Once you've learned about many-to-many associations, let's add the `roles` join table:
+
+```sh
+psql < roles.sql
+```
+
+As an exercise, write the queries that will show you the following information:
+
+1.  The star first name, star last name, and movie title for every matching movie and star pair in the database.
+1.  The first and last names of every star who has been in a G-rated movie.
+1.  The first and last names of every star along with the number of movies they have been in, in descending order by the number of movies.
+1.  The title of every movie along with the number of stars in that movie, in descending order by the number of stars.
+1.  The first and last names of the five stars whose movies have the longest average.
+1.  The first and last names of the five stars whose movies have the longest average, among stars who have more than one movie in the database.
+
+### Part 4
+
+Try writing the following queries using a join that isn't an inner join:
+
+1.  The titles of all movies that don't feature any stars in our database.
+2.  The first and last names of all stars that don't appear in any movies in our database.
+3.  The first names, last names, and titles corresponding to every role in the database, along with every movie title that doesn't have a star, and the first and last names of every star not in a movie.
