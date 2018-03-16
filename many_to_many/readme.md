@@ -38,6 +38,19 @@ As another warmup, write the queries that will show you the following informatio
 
 ### Part 3
 
+Now let's explore some basic joins with a 1 to many association!
+
+```
+psql < studios.sql
+```
+
+Write the queries that will show you the following information:
+
+1.  The movie title and studio name for every movie in the database.
+2.  The names of all studios that have no movie in the database (try to do this with two different queries!)
+
+### Part 4
+
 Once you've learned about many-to-many associations, let's add the `roles` join table:
 
 ```sh
@@ -53,7 +66,7 @@ As an exercise, write the queries that will show you the following information:
 1.  The first and last names of the five stars whose movies have the longest average.
 1.  The first and last names of the five stars whose movies have the longest average, among stars who have more than one movie in the database.
 
-### Part 4
+### Part 5
 
 Try writing the following queries using a join that isn't an inner join:
 
