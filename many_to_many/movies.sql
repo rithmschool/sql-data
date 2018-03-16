@@ -3,10 +3,10 @@ DROP TABLE IF EXISTS movies;
 CREATE TABLE movies
 (
   id SERIAL PRIMARY KEY,
-  title TEXT,
-  release_year INTEGER,
-  runtime INTEGER,
-  rating TEXT
+  title TEXT NOT NULL,
+  release_year INTEGER NOT NULL,
+  runtime INTEGER NOT NULL,
+  rating TEXT NOT NULL
 );
 INSERT INTO movies
   (title, release_year, runtime, rating)

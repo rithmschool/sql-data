@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS studios;
 CREATE TABLE studios
 (
   id SERIAL PRIMARY KEY,
-  name TEXT
+  name TEXT NOT NULL
 );
 
 INSERT INTO studios

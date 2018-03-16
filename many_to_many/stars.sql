@@ -3,9 +3,9 @@ DROP TABLE IF EXISTS stars;
 CREATE TABLE stars
 (
   id SERIAL PRIMARY KEY,
-  first_name TEXT,
+  first_name TEXT NOT NULL,
   last_name TEXT,
-  birth_date DATE
+  birth_date DATE NOT NULL
 );
 INSERT INTO stars
   (first_name, last_name, birth_date)
