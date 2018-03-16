@@ -63,8 +63,8 @@ As an exercise, write the queries that will show you the following information:
 1.  The first and last names of every star who has been in a G-rated movie.
 1.  The first and last names of every star along with the number of movies they have been in, in descending order by the number of movies.
 1.  The title of every movie along with the number of stars in that movie, in descending order by the number of stars.
-1.  The first and last names of the five stars whose movies have the longest average.
-1.  The first and last names of the five stars whose movies have the longest average, among stars who have more than one movie in the database.
+1.  The first name, last name, and average runtime of the five stars whose movies have the longest average.
+1.  The first name, last name, and average runtime of the five stars whose movies have the longest average, among stars who have more than one movie in the database.
 
 ### Part 5
 
