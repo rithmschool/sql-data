@@ -8,13 +8,15 @@ CREATE DATABASE library;
 
 \c library
 
-CREATE TABLE books (id SERIAL PRIMARY KEY,
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
   title TEXT,
   author TEXT,
   price MONEY,
   page_count INTEGER,
   publisher TEXT,
-  publication_date DATE);
+  publication_date DATE
+);
 
 INSERT INTO books (title, author, price, page_count, publisher, publication_date) VALUES 
   ('The Design of Everyday Things: Revised and Expanded Edition', 'Don Norman', 12.92, 368, 'Basic Books', '2013-11-05'),

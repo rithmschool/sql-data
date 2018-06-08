@@ -2,4 +2,4 @@
 
 Dummy data sets for SQL exploration.
 
-[Books](./books.sql)
+[Books](./single_table/books.sql)
