@@ -7,28 +7,29 @@ DROP TABLE IF EXISTS studios;
 CREATE TABLE studios
 (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL
+  name TEXT NOT NULL,
+  start_date DATE
 );
 
 INSERT INTO studios
-  (name)
+  (name, start_date)
 VALUES
-  ('Buena Vista'),
-  ('20th Century Fox'),
-  ('Paramount'),
-  ('Universal'),
-  ('Warner Bros.'),
-  ('Dreamworks SKG'),
-  ('Lionsgate'),
-  ('Sony / Columbia'),
-  ('New Line'),
-  ('Newmarket'),
-  ('Summit Entertainment'),
-  ('Orion Pictures'),
-  ('Sony Classics');
+  ('Walt Disney Studios Motion Pictures', '1953-06-23'),
+  ('20th Century Fox', '1935-05-31'),
+  ('Paramount Pictures', '1912-05-08'),
+  ('Universal Pictures', '1912-04-30'),
+  ('Warner Bros.', '1923-04-04'),
+  ('Dreamworks SKG', '1994-10-12'),
+  ('Lionsgate', '1997-07-10'),
+  ('Sony / Columbia Pictures', '1924-01-10'),
+  ('New Line Cinema', '1967-01-01'),
+  ('Newmarket Films', '1994-01-01'),
+  ('Summit Entertainment', '1991-07-26'),
+  ('Orion Pictures', '1978-01-01'),
+  ('Sony Pictures Classics', '1992-01-01');
 
 ALTER TABLE movies
-  ADD COLUMN studio_id INTEGER;
+  ADD COLUMN studio_id INTEGER REFERENCES studios;
 
 UPDATE movies 
   SET studio_id=1
