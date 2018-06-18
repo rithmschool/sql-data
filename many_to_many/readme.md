@@ -236,13 +236,13 @@ Try writing the following queries using a join that isn't an inner join:
 
 2.  The first and last names of all stars that don't appear in any movies in our database.
 
-```sql
-SELECT s.first_name, s.last_name
-  FROM roles r
-  RIGHT JOIN stars s
-    ON s.id = r.star_id
-  WHERE r.id is NULL;
-```
+    ```sql
+    SELECT s.first_name, s.last_name
+      FROM roles r
+      RIGHT JOIN stars s
+        ON s.id = r.star_id
+      WHERE r.id is NULL;
+    ```
 
 3.  The first names, last names, and titles corresponding to every role in the database, along with every movie title that doesn't have a star, and the first and last names of every star not in a movie.
 
